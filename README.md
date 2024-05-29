@@ -11,3 +11,5 @@ npm install && npx prisma generate && npx prisma db push && node app
 ```
 
 ### Preview
+https://github.com/muffinweb/Tefastat/assets/36825498/e8e1b248-3cd1-4bce-aaad-4f78af7a1769
+
