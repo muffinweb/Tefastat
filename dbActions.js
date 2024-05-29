@@ -6,6 +6,8 @@ const prisma = new PrismaClient();
 async function fetchFunds(){
     let results = await prisma.$queryRaw`SELECT * FROM fonlar WHERE getiri1a IS NOT NULL AND getiri5y IS NOT NULL ORDER BY getiri1a ASC, getiri5y DESC`;
 
+    console.log(results);
+
     let tableData = [];
     tableData.push(['KOD', 'TUR', '1A', '1Y', '3Y', '5Y']);
 
