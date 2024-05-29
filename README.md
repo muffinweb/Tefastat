@@ -1,5 +1,7 @@
 # Tefastat
  This project fetches funds from official service and brings best time to buy funds to cli
+ 
+![tefas-mini](https://github.com/muffinweb/Tefastat/assets/36825498/344273c5-0f95-4c28-a3aa-c91625b52128)
 
 ### Launch Steps
 ```bash
