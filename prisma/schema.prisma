@@ -1,0 +1,23 @@
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model fonlar {
+  id Int @id @default(autoincrement())
+  kod String?
+  unvan String?
+  tur String?
+  getiri1a Int?
+  getiri3a Int?
+  getiri6a Int?
+  getiri1y Int?
+  getiriyb Int?
+  getiri3y Int?
+  getiri5y Int?
+}

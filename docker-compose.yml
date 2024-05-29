@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+  mysql:
+    container_name: mysql
+    image: mysql:8.0
+    tty: true
+    healthcheck:
+      test: [ "CMD", "mysqladmin", "ping", "-h", "localhost" ]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+    environment:
+      MYSQL_ALLOW_EMPTY_PASSWORD: 'yes'
+      MYSQL_ROOT_PASSWORD:
+      MYSQL_DATABASE: invests
+    ports:
+      - "3306:3306"
