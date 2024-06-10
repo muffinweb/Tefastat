@@ -3,7 +3,8 @@
   "type": "module",
   "version": "1.0.0",
   "scripts": {
-    "start": "node app.js"
+    "start": "node app.js",
+    "solution": "npm install && npx prisma generate && npx prisma db push && node app"
   },
   "dependencies": {
     "@prisma/client": "^5.13.0",
