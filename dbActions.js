@@ -11,6 +11,13 @@ async function fetchFunds(){
 
     results.forEach((v,i) => {
 
+        //Change Result values to tr-TR curreny format
+
+        v.getiri1a = new Intl.NumberFormat('tr-TR', {maximumFractionDigits:2}).format(v.getiri1a);
+        v.getiri1y = new Intl.NumberFormat('tr-TR', {maximumFractionDigits:2}).format(v.getiri1y);
+        v.getiri3y = new Intl.NumberFormat('tr-TR', {maximumFractionDigits:2}).format(v.getiri3y);
+        v.getiri5y = new Intl.NumberFormat('tr-TR', {maximumFractionDigits:2}).format(v.getiri5y);
+
         tableData.push([
             v.kod,
             v.tur,
