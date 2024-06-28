@@ -7,7 +7,7 @@ async function fetchFunds(){
     let results = await prisma.$queryRaw`SELECT * FROM fonlar WHERE getiri1a IS NOT NULL AND getiri5y IS NOT NULL ORDER BY getiri1a ASC, getiri5y DESC`;
 
     let tableData = [];
-    tableData.push(['KOD', 'TUR', '1A', '1Y', '3Y', '5Y']);
+    tableData.push(['KOD', 'ADI', 'TUR', '1A', '1Y', '3Y', '5Y']);
 
     results.forEach((v,i) => {
 
@@ -20,6 +20,7 @@ async function fetchFunds(){
 
         tableData.push([
             v.kod,
+            v.unvan,
             v.tur,
             v.getiri1a,
             v.getiri1y,
